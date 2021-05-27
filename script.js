@@ -35,7 +35,7 @@ document.getElementById('search').addEventListener('click', function (event) {
       for(let i=0; i<4;i++){
       $('#forecast').append(`
       <div class="col-sm-3 border bg-primary"><p>${date.getMonth() + 1}/${date.getDate()+i+1}/${date. getFullYear()}</p>
-      <p><img src="http://openweathermap.org/img/wn/${res2.data.daily[i].weather[0].icon}.png"></p>
+      <p><img src="https://openweathermap.org/img/wn/${res2.data.daily[i].weather[0].icon}.png"></p>
       <p>Temp: ${res2.data.daily[i].temp.day} F</p>
       <p>Humidity: ${res2.data.daily[i].humidity} %</p>
       </div>`)
