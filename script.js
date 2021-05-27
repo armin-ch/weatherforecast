@@ -17,10 +17,10 @@ document.getElementById('search').addEventListener('click', function (event) {
   localStorage.setItem('saved', JSON.stringify(savedCity))
   let date = new Date()
   $('h1').append(city + ` (${date.getMonth()+1}/${date.getDate()}/${date.getFullYear()})`)
-  axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=7737f57b4924159f2e353b4654856253`)
+  axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=7737f57b4924159f2e353b4654856253`)
   .then(res => {
     console.log(res.data)
-    $('h1').append(`<img src="http://openweathermap.org/img/wn/${res.data.weather[0].icon}.png">`)
+    $('h1').append(`<img src="https://openweathermap.org/img/wn/${res.data.weather[0].icon}.png">`)
     $('#main').append(`<p>Temperature: ${res.data.main.temp} F</p>
     <p>Humidity: ${res.data.main.humidity}%</p>
     <p>Wind Speed: ${res.data.wind.speed} MPH</p>
